@@ -1,0 +1,25 @@
+{
+  "name": "raspberry-pi-nw-monitoring",
+  "version": "1.0.0",
+  "description": "just a small raspberry pi nw monitoring project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almac777/raspberry-pi-nw-monitoring.git"
+  },
+  "author": "Al Mac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/almac777/raspberry-pi-nw-monitoring/issues"
+  },
+  "homepage": "https://github.com/almac777/raspberry-pi-nw-monitoring#readme",
+  "dependencies": {
+    "@types/express": "^4.17.1",
+    "express": "^4.17.1",
+    "typescript": "^3.6.2"
+  }
+}
