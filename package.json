@@ -1,11 +1,13 @@
 {
   "name": "raspberry-pi-nw-monitoring",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "just a small raspberry pi nw monitoring project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "test": "mocha -r ts-node/register src/test/**/test.ts",
+    "dev": "set NODE_ENV=development && tsc-watch --onSuccess \"node ./build/app/main.js\"",
+    "prod": "set NODE_ENV=production && tsc && node ./build/app/main.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,18 @@
   "dependencies": {
     "@types/cron": "^1.7.1",
     "@types/express": "^4.17.1",
+    "@types/mocha": "^5.2.7",
     "@types/ping": "^0.2.0",
     "@types/sqlite3": "^3.1.5",
     "cron": "^1.7.2",
     "express": "^4.17.1",
+    "mocha": "^6.2.0",
     "ping": "^0.2.2",
     "sqlite3": "^4.1.0",
+    "ts-node-dev": "^1.0.0-pre.42",
+    "tsc-watch": "^3.0.0",
+    "tslib": "^1.10.0",
+    "typed-inject": "^2.1.0",
     "typescript": "^3.6.2"
   }
 }
