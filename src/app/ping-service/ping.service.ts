@@ -1,6 +1,6 @@
 import {PingConfig, PingResponse, promise} from 'ping';
 import {tokens} from 'typed-inject';
-import {PingConsumer} from './ping.consumer';
+import {PingConsumer} from './consumers/ping.consumer';
 import {CronCommand, CronJob, CronJobParameters, job} from 'cron';
 import {PingServiceConfig} from './ping.service.config';
 
@@ -32,20 +32,6 @@ export class PingService {
 
     public dispatchPing(uri: string) {
         promise.probe(uri, this.config.pingConfig).then((response: PingResponse) => {
-            // @todo: Improve this
-            response.output.split('\n').forEach(line => {
-                const regexpMatch = line.match(/(\d+.\d+)\sms/);
-                if (regexpMatch !== null) {
-                    regexpMatch.forEach(
-                        (val, number) => {
-                            if (number === 1) {
-                                console.log(val);
-                            }
-                        }
-                    );
-                }
-            });
-            response.output = '';
             this.consumer.consume(response);
         });
     }

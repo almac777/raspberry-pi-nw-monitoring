@@ -1,4 +1,4 @@
-import {PingConsumer} from '../ping.consumer';
+import {PingConsumer} from './ping.consumer';
 import {PingResponse} from 'ping';
 
 export class DatabaseConsumer implements PingConsumer {

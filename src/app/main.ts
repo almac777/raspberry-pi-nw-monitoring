@@ -6,7 +6,7 @@ import {PingService} from './ping-service/ping.service';
 import {PingConfig} from 'ping';
 import {DatabaseConsumer} from './ping-service/consumers/database.consumer';
 import {LoggingConsumer} from './ping-service/consumers/logging.consumer';
-import {PingConsumer} from './ping-service/ping.consumer';
+import {PingConsumer} from './ping-service/consumers/ping.consumer';
 import {PingServiceConfig} from './ping-service/ping.service.config';
 
 // Create a new express application instance
