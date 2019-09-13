@@ -1,9 +1,9 @@
 import {OutputParser} from './output.parser';
 import {PingResponse} from 'ping';
-import {PingOutputParse} from './ping-output-parse';
+import {ParsedData} from './model/parsed-data';
 
 export class WindowsOutputParser implements OutputParser {
-    parse(response: PingResponse): PingOutputParse {
+    parse(response: PingResponse): ParsedData {
         throw Error('[ WindowsOutputParser ] not yet implemented')
     }
 
