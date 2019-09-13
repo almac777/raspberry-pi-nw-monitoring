@@ -8,6 +8,10 @@ yarn-error.log*
 # IntelliJ
 .idea
 
+# Gradle
+.gradle
+.gradle/*
+
 # Runtime data
 pids
 *.pid

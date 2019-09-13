@@ -6,5 +6,4 @@ export class WindowsOutputParser implements OutputParser {
     parse(response: PingResponse): ParsedData {
         throw Error('[ WindowsOutputParser ] not yet implemented')
     }
-
 }

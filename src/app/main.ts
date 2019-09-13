@@ -44,7 +44,7 @@ function pingConsumerFactory(os: string, outputParser: OutputParser): PingConsum
         switch (env) {
             case 'dev':
             case 'prod':
-                consumer = new DatabaseConsumer();
+                consumer = new DatabaseConsumer(outputParser);
                 break;
             default:
                 consumer = new LoggingConsumer(outputParser);
